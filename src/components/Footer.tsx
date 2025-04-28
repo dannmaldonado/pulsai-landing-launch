@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
 import Logo from './Logo';
@@ -79,6 +80,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors"
+            aria-label="Abrir WhatsApp"
           >
             <MessageSquare className="h-4 w-4" />
             <span className="text-sm font-medium">Falar no WhatsApp</span>

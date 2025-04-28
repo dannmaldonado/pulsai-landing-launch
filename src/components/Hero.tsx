@@ -29,6 +29,7 @@ const Hero = () => {
               <Button
                 onClick={scrollToForm}
                 className="btn-cta text-lg"
+                aria-label="Agendar Avaliação"
               >
                 Quero minha avaliação gratuita
               </Button>
@@ -37,6 +38,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer" 
                 className="btn-secondary"
+                aria-label="Abrir WhatsApp"
               >
                 Falar com especialista
               </a>
