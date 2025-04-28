@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,12 +10,8 @@ const Footer = () => {
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="flex items-center mb-4">
-              {/* Logo placeholder - pode ser substituído pelo logo real */}
-              <div className="flex items-end">
-                <span className="text-2xl font-bold text-white">puls</span>
-                <span className="text-2xl font-bold text-primary">AI</span>
-              </div>
+            <div className="mb-4">
+              <Logo />
             </div>
             <p className="text-sm opacity-80 mb-6 max-w-md">
               Inteligência Artificial prática para PMEs, clínicas e agências de marketing.
