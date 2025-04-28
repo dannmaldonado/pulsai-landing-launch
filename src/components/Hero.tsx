@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import Logo from './Logo';
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -13,6 +14,9 @@ const Hero = () => {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container px-4 mx-auto">
+        <div className="flex justify-center md:justify-start mb-12">
+          <Logo />
+        </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
           <div className="md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-secondary mb-6 leading-tight">
