@@ -36,21 +36,28 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="section-padding bg-white">
+    <section id="faq" className="py-20 bg-white">
       <div className="container px-4 mx-auto">
-        <h2 className="section-heading text-center">Perguntas frequentes</h2>
-        <p className="section-subheading text-center">
-          Respostas para as dúvidas mais comuns sobre nossos serviços
-        </p>
+        <div className="flex flex-col items-center mb-16">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+              <div className="w-4 h-4 rounded-full bg-primary"></div>
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Perguntas frequentes</h2>
+          <p className="text-lg md:text-xl text-center max-w-2xl text-secondary-500/80">
+            Respostas para as dúvidas mais comuns sobre nossos serviços
+          </p>
+        </div>
 
-        <div className="max-w-3xl mx-auto mt-12">
+        <div className="max-w-3xl mx-auto mt-12 bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left font-medium text-secondary">
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-100 last:border-0">
+                <AccordionTrigger className="text-left font-bold text-secondary py-4 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-secondary-500/80">
+                <AccordionContent className="text-secondary-500/80 pb-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -61,7 +68,7 @@ const FAQ = () => {
         <div className="mt-12 text-center">
           <p className="text-secondary-500/80">
             Não encontrou o que procurava?{' '}
-            <a href="https://wa.me/5518991090670" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
+            <a href="https://wa.me/5518991090670" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline">
               Fale conosco pelo WhatsApp
             </a>
           </p>

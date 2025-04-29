@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProofBar = () => {
   return (
-    <section className="bg-gray-50 py-8 md:py-10 border-y border-gray-100">
+    <section className="bg-white py-8 md:py-10 border-y border-gray-100 relative">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center">
           <p className="text-center text-lg text-secondary-500/70 font-medium mb-6">
@@ -36,10 +36,13 @@ const ProofBar = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 md:mt-10 bg-primary-50 py-3 px-6 rounded-full">
-            <p className="text-primary-700 font-medium text-center">
-              <span className="font-bold">+38%</span> de leads convertidos em 60 dias após implementação
-            </p>
+          <div className="mt-8 md:mt-10">
+            <div className="bg-gradient-to-r from-primary-100 to-primary-50 py-3 px-8 rounded-full">
+              <p className="text-primary-700 font-bold text-center flex items-center">
+                <span className="text-xl mr-2">+38%</span> 
+                <span>de leads convertidos em 60 dias após implementação</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>

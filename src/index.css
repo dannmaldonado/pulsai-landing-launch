@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -94,7 +94,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    @apply font-bold tracking-tight;
   }
 }
 
@@ -104,7 +104,7 @@
   }
   
   .section-heading {
-    @apply text-3xl md:text-4xl font-semibold mb-4 md:mb-6 text-secondary;
+    @apply text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-secondary;
   }
   
   .section-subheading {
@@ -112,26 +112,52 @@
   }
   
   .card {
-    @apply bg-white p-6 md:p-8 rounded-xl shadow-card transition-all duration-300;
+    @apply bg-white p-6 md:p-8 rounded-xl shadow-card transition-all duration-300 border border-gray-100;
   }
 
   .hover-card {
-    @apply hover:shadow-lg hover:translate-y-[-4px] transition-all duration-300;
+    @apply hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300;
   }
   
   .btn-primary {
-    @apply bg-primary text-white font-medium px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors shadow-sm;
+    @apply bg-primary text-white font-medium px-6 py-3 rounded-full hover:bg-primary-600 transition-all shadow-sm;
   }
   
   .btn-secondary {
-    @apply bg-white text-primary border border-primary font-medium px-6 py-3 rounded-lg hover:bg-primary-50 transition-colors;
+    @apply bg-white text-primary border-2 border-primary font-medium px-6 py-3 rounded-full hover:bg-primary-50 transition-all;
   }
   
   .btn-cta {
-    @apply bg-primary text-white font-medium px-8 py-4 rounded-lg hover:bg-primary-600 transition-colors shadow-md text-lg;
+    @apply bg-primary text-white font-medium px-8 py-4 rounded-full hover:bg-primary-600 transition-all shadow-md text-lg;
   }
 
   .section-alternating-bg {
     @apply odd:bg-white even:bg-gray-50;
   }
+  
+  /* Estilos para animação de pontos */
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+}
+
+/* Animação para os círculos de fundo */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

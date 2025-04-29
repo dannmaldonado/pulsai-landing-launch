@@ -18,9 +18,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Header pode ser adicionado no futuro se necessário */}
-      
+    <div className="min-h-screen flex flex-col bg-white">
       <main>
         <Hero />
         <ProofBar />

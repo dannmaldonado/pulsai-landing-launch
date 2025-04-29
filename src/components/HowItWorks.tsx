@@ -31,21 +31,31 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="section-padding bg-white">
+    <section id="how-it-works" className="section-padding bg-white relative">
+      {/* Círculo decorativo */}
+      <div className="absolute left-0 top-1/3 w-48 h-48 rounded-full bg-primary/5 filter blur-xl -z-10"></div>
+      
       <div className="container px-4 mx-auto">
-        <h2 className="section-heading text-center">Como funciona</h2>
-        <p className="section-subheading text-center">
-          Nossa abordagem em 3 etapas garante implementação rápida e resultados consistentes para seu negócio
-        </p>
+        <div className="flex flex-col items-center mb-16">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+              <div className="w-4 h-4 rounded-full bg-primary"></div>
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Como funciona</h2>
+          <p className="text-lg md:text-xl text-center max-w-2xl text-secondary-500/80">
+            Nossa abordagem em 3 etapas garante implementação rápida e resultados consistentes para seu negócio
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {steps.map((step) => (
-            <div key={step.id} className="card hover-card flex flex-col">
+            <div key={step.id} className="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-primary-50 p-3 rounded-lg">
+                <div className="bg-primary/10 p-3 rounded-lg">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-secondary">
+                <h3 className="text-xl font-bold text-secondary">
                   {step.title}
                 </h3>
               </div>
