@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { MessageSquare } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -79,16 +78,6 @@ const Footer = () => {
           <p className="text-sm opacity-70">
             &copy; {currentYear} PulsAI. Todos os direitos reservados.
           </p>
-          <a 
-            href="https://wa.me/5518991090670" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-600 px-4 py-2 rounded-full transition-all"
-            aria-label="Abrir WhatsApp"
-          >
-            <MessageSquare className="h-4 w-4" />
-            <span className="text-sm font-medium">Falar no WhatsApp</span>
-          </a>
         </div>
       </div>
     </footer>
