@@ -29,7 +29,7 @@ const Hero = () => {
             <p className="text-xl mb-8 text-secondary-500/80">
               Assistentes virtuais que atendem seus clientes <span className="font-medium">24/7</span> e aumentam seu volume de leads em até <span className="font-medium">38%</span>.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start">
               <Button
                 onClick={scrollToForm}
                 className="bg-primary hover:bg-primary/90 text-white py-6 px-8 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-1"
@@ -37,15 +37,6 @@ const Hero = () => {
               >
                 Quero minha avaliação gratuita
               </Button>
-              <a 
-                href="https://wa.me/5518991090670"
-                target="_blank"
-                rel="noopener noreferrer" 
-                className="border-2 border-primary text-primary bg-transparent py-5 px-8 rounded-full text-lg font-medium hover:bg-primary/5 transition-all"
-                aria-label="Abrir WhatsApp"
-              >
-                Falar com especialista
-              </a>
             </div>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0">
