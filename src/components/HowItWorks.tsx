@@ -2,6 +2,8 @@
 import React from 'react';
 import { MessageSquare, FileText } from 'lucide-react';
 
+// Services component - updated to show service options
+
 const HowItWorks = () => {
   const services = [
     {
