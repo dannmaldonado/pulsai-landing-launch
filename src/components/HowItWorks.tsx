@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { MessageSquare, Calculator, FileText } from 'lucide-react';
+import { MessageSquare, FileText } from 'lucide-react';
 
 const HowItWorks = () => {
-  const steps = [
+  const services = [
     {
       id: 1,
       title: 'Assistant',
@@ -14,14 +14,6 @@ const HowItWorks = () => {
     },
     {
       id: 2,
-      title: 'Automate',
-      icon: <Calculator className="h-8 w-8 text-primary" />,
-      description: 'Automatizações que eliminam tarefas repetitivas e aumentam a produtividade da sua equipe.',
-      feature: 'Workflows automatizados com IA',
-      cta: 'Saiba mais'
-    },
-    {
-      id: 3,
       title: 'Consult',
       icon: <FileText className="h-8 w-8 text-primary" />,
       description: 'Consultoria estratégica para implementar soluções de IA que transformam seu negócio.',
@@ -42,28 +34,28 @@ const HowItWorks = () => {
               <div className="w-4 h-4 rounded-full bg-primary"></div>
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Como funciona</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Nossos Serviços</h2>
           <p className="text-lg md:text-xl text-center max-w-2xl text-secondary-500/80">
-            Nossa abordagem em 3 etapas garante implementação rápida e resultados consistentes para seu negócio
+            Oferecemos soluções de IA personalizadas para diferentes necessidades do seu negócio
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {steps.map((step) => (
-            <div key={step.id} className="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          {services.map((service) => (
+            <div key={service.id} className="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-primary/10 p-3 rounded-lg">
-                  {step.icon}
+                  {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  {step.title}
+                  {service.title}
                 </h3>
               </div>
               <p className="mb-4 text-secondary-500/80 flex-grow">
-                {step.description}
+                {service.description}
               </p>
               <div className="mt-4 pt-4 border-t border-gray-100">
-                <p className="text-sm text-primary font-medium mb-3">{step.feature}</p>
+                <p className="text-sm text-primary font-medium mb-3">{service.feature}</p>
                 <a 
                   href="#contact-form"
                   onClick={(e) => {
@@ -72,7 +64,7 @@ const HowItWorks = () => {
                   }} 
                   className="text-primary font-medium hover:underline inline-flex items-center"
                 >
-                  {step.cta} <span className="ml-1">→</span>
+                  {service.cta} <span className="ml-1">→</span>
                 </a>
               </div>
             </div>
@@ -81,8 +73,8 @@ const HowItWorks = () => {
 
         <div className="mt-16 text-center">
           <p className="text-secondary-500/80 max-w-2xl mx-auto">
-            <strong>Nossa metodologia:</strong> Começamos com um assistente básico, evoluímos para automações 
-            complexas e finalizamos com consultoria estratégica para maximizar o potencial da IA no seu negócio.
+            <strong>Nossa abordagem:</strong> Oferecemos assistentes virtuais inteligentes para 
+            atendimento automatizado e consultoria estratégica para maximizar o potencial da IA no seu negócio.
           </p>
         </div>
       </div>
