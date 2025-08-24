@@ -2,11 +2,14 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/puls0278/public_html/
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp -R js $DEPLOYPATH  
-    - /bin/cp -R images $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp -R js $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp -R images $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp -R assets $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp index.html $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp *.html $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp *.css $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp *.js $DEPLOYPATH 2>/dev/null || true
     - /bin/rm -f $DEPLOYPATH/.cpanel.yml
     - /bin/rm -rf $DEPLOYPATH/.git
