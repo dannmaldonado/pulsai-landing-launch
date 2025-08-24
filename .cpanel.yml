@@ -1,8 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/puls0278/launch.pulsai.com.br
-    - /bin/mkdir -p $DEPLOYPATH
-    - /usr/local/bin/npm ci || /usr/local/bin/npm install
-    - /usr/local/bin/npm run build
-    - /bin/rsync -a --delete dist/ $DEPLOYPATH/
